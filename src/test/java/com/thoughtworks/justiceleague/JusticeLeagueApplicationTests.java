@@ -1,4 +1,4 @@
-package com.thoughtwprks.justiceleague;
+package com.thoughtworks.justiceleague;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.thoughtwprks.justiceleague;
+package com.thoughtworks.justiceleague;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
