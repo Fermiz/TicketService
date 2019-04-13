@@ -11,35 +11,27 @@ import javax.persistence.Table;
 @Table(name = "parking_lot")
 @NoArgsConstructor
 public class ParkingLot implements ValueObject<ParkingLot> {
-
-    private int capacity;
-
     @Id
     private Long parkingLotId;
+
+    public ParkingLot(Long parkingLotId) {
+        this.parkingLotId = parkingLotId;
+    }
 
     public Long getParkingLotId() {
         return parkingLotId;
     }
 
-    private ParkingBoyId parkingBoyId;
-
-    public ParkingBoyId getParkingBoyId() {
-        return parkingBoyId;
-    }
-
-
     @Override
     public String toString() {
-        return "ParkingLot{" +
-                "capacity=" + capacity +
-                '}';
+        return "ParkingLot{" + '}';
     }
 
     @Override
     public boolean equals(Object obj) {
-        if(obj == this) return true;
-        if(obj == null) return false;
-        if(getClass() != obj.getClass()) return false;
+        if (obj == this) return true;
+        if (obj == null) return false;
+        if (getClass() != obj.getClass()) return false;
 
         ParkingLot other = (ParkingLot) obj;
         return sameValueAs(other);
@@ -47,6 +39,6 @@ public class ParkingLot implements ValueObject<ParkingLot> {
 
     @Override
     public boolean sameValueAs(ParkingLot other) {
-        return parkingLotId.equals(other.getParkingLotId()) && parkingBoyId.sameValueAs(other.getParkingBoyId());
+        return parkingLotId.equals(other.getParkingLotId());
     }
 }

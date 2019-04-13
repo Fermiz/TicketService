@@ -19,7 +19,7 @@ public class TicketServiceImpl implements TicketService {
     @Override
     public Ticket create(Long parkingLotId, LicensePlateId licensePlateId) {
 
-        ParkingLot parkingLot = parkingLotRepository.find(parkingLotId);
+        ParkingLot parkingLot = new ParkingLot(parkingLotId);
 
         TicketId ticketId = new TicketId(ticketRepository.nextTicketId());
         Ticket newTicket = new Ticket(ticketId, parkingLot, licensePlateId);
