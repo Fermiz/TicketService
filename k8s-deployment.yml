@@ -20,12 +20,12 @@ spec:
   template:
     metadata:
       labels:
-        app: parking-service
+        app: justice-league-ticket-service
         version: v2
     spec:
       containers:
-      - name: parking-service
-        image: 076880417388.dkr.ecr.cn-northwest-1.amazonaws.com.cn/parking-service:latest
+      - name: justice-league-ticket-service
+        image: 076880417388.dkr.ecr.cn-northwest-1.amazonaws.com.cn/justice-league-ticket-service:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
